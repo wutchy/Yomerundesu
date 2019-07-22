@@ -1,24 +1,14 @@
-# README
+# YomeRunDesu
+## 概要
+画像を選択すると、
+1. どんな食べ物であるか
+1. どのような文字が
+1. 顔認証
+1. 
+などの結果を表示する
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 実装
+IBM CloudでVisual RecognitioのAPIをたて、Ruby on Railsで構築したアプリケーションでAPIを叩いた結果を整形して表示する
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## リンク
+未デプロイ
