@@ -7,7 +7,7 @@ class ExampleController < ApplicationController
   def aaa
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: ""
     )
     @image="/banana.gif"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
@@ -22,14 +22,14 @@ class ExampleController < ApplicationController
   def bbb
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: ""
     )
     @image="/english.jpg"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
       classes = visual_recognition.classify(
         images_file: images_file,
-        #classifier_ids:["food"]
-        accept_language: ["en", "ja"]
+        classifier_ids:["text"],
+        #accept_language: ["en", "ja"]
       )
       @bbb=JSON.pretty_generate(classes.result)
     end
@@ -38,7 +38,7 @@ class ExampleController < ApplicationController
   def ccc
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: ""
     )
     @image="/shuma.jpg"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
