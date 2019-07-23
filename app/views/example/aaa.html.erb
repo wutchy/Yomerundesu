@@ -1,8 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="ja">
-
-
+<html lang="ja"
 <head>
   <meta charset="UTF-8">
   <title>読めルンです。</title>
@@ -24,7 +21,7 @@
           <ul>
             <li>この画像は...</li>
             <% @aaa.each do|a| %>
-            <li><span><%= a["score"] %>%</span>の確率で<span><%= a["class"] %></span>です。</li>
+            <li><span><%= (a["score"]*100).round %>%</span>の確率で<span><%= a["class"] %></span>です。</li>
             <% end %>
           </ul>
         </div>
