@@ -1,12 +1,20 @@
-<% @posts.each do |post| %>
-  <p>
-    <%= post.name %><br>
-    <%= image_tag post.image.url %>
-  </p>
+
+<% if params["name"]=="1" %>
+<% path="ddd" %>
+<% title="文字認証"%>
+<% elsif params["name"]=="2" %>
+<% path="ccc" %>
+<% title="顔認証"%>
+<% elsif params["name"]=="3" %>
+<% path="aaa" %>
+<% title="食べ物認証"%>
+<% elsif params["name"]=="4" %>
+<% path="bbb" %>
+<% title="ナンデモ認証"%>
 <% end %>
-<hr>
-<%= form_for :post, url: 'example/ddd'  do |f| %>
-  <p><%=f.label "投稿者" %><br><%= f.text_field :name, placeholder: 'ハンドルネーム' %></p>
-  <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
-  <p><%= f.submit value: '投稿' %></p>
+
+<%= form_tag(path,method: "post" , multipart: true)   do  %>
+  <p><%=title%></p>
+  <%= file_field_tag :image  %>
+  <%= submit_tag %>
 <% end %>
