@@ -57,15 +57,13 @@ div img {
   max-width: 90%;
 }
 
-div.wrap {
+div .wrap {
   display:flex;
 }
 
 div .img {
   width:49%;
 }
-
-
 
 div .analysis {
   width: 49%;
@@ -79,6 +77,9 @@ div .analysis h2 {
   background-color: #ff7f50;
 }
 
+center{
+
+}
 
 #result {
   width:300px;
