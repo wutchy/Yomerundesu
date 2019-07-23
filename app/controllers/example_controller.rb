@@ -4,6 +4,8 @@ class ExampleController < ApplicationController
   require "ibm_watson/visual_recognition_v3"
   include IBMWatson
 
+  protect_from_forgery
+
   def top
   end
 
