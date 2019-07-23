@@ -1,1 +1,35 @@
-<% File.binwrite("public/test.jpg",params[:image].read) %><br/>
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <title>読めルンです。</title>
+    <meta name="description" content="画像からテキストを生成し、タグ付けによる分類ができるウェブアプリです。">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <h1><a href="top">読め<span>ルン</span>です。</a></h1>
+    <h2>文字認証システム</h2>
+    <br>
+    <div class="load">
+      このシステムは現在開発中です。
+    </div>
+
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+
+    <br>
+    <center>
+      <a href="top" class="btn-horizontal-border">ホームへ戻る</a>
+    </center>
+  </body>
+</html>

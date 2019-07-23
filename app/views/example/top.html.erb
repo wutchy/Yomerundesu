@@ -1,15 +1,62 @@
-<%= form_tag("example/upload",method: "post")   do  %>
-  <button type="submit" name="name" value="1">
-<% end %>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>読めルンです。</title>
+    <meta name="description" content="画像からテキストを生成し、タグ付けによる分類ができるウェブアプリです。">
+    <style type="text/css">
 
-<%= form_tag("example/upload",method: "post")   do  %>
-  <button type="submit" name="name" value="2">
-<% end %>
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<%= form_tag("example/upload",method: "post")   do  %>
-  <button type="submit" name="name" value="3">
-<% end %>
+  <body>
 
-<%= form_tag("example/upload",method: "post")   do  %>
-  <button type="submit" name="name" value="4">
-<% end %>
+<h1><a href="top">読め<span>ルン</span>です。</a></h1>
+       <h2>処理センタクがめん。</h2>
+
+       <div class="second">
+         <div class="subtitle">処理内容を選<span>ブン</span>です。</div>
+       </div>
+
+
+       <div class="parent">
+
+     <div class="child">
+ <div class="divName"></div>
+ <%= form_tag("ddd",method: "post")   do  %>
+   <button type="submit" name="name" value="1" class="submit_btn picture1">
+ <% end %>
+ <p class="div-contents">画像内の文字をテキスト変換しちゃ<span>ウン</span>です。</p>
+     </div>
+
+     <div class="child">
+ <div class="divName"></div>
+ <%= form_tag("upload",method: "post")   do  %>
+   <button type="submit" name="name" value="2" class="submit_btn picture2">
+ <% end %>
+ <p class="div-contents">画像内の人物にタグ付けしちゃ<span>ウン</span>です。</p>
+     </div>
+
+     <div class="child">
+ <div class="divName"></div>
+ <%= form_tag("upload",method: "post")   do  %>
+   <button type="submit" name="name" value="3" class="submit_btn picture3">
+ <% end %>
+ <p class="div-contents">画像内の食べ物にタグ付けしちゃ<span>ウン</span>です。</p>
+     </div>
+
+     <div class="child">
+ <div class="divName"></div>
+ <%= form_tag("upload",method: "post")   do  %>
+   <button type="submit" name="name" value="4" class="submit_btn picture4">
+ <% end %>
+ <p class="div-contents">全ての処理を実行しちゃ<span>ウン</span>です。</p>
+     </div>
+
+   </div>
+
+</body>
+</html>

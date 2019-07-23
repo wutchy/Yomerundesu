@@ -1,0 +1,111 @@
+@charset "UTF-8"
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Roboto','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+    font-size: 15px;
+    line-height:1.9;
+    text-align: justify;
+}
+
+h1 {
+    margin: 10px;
+    color: #a9a9a9;
+    position: relative;
+    line-height: 1.4;
+    padding:0.25em 1em;
+    display: inline-block;
+}
+
+h1 span {
+    color: #FFCC66;
+}
+
+h1:before, h1:after {
+	       content:'';
+	       width: 20px;
+	       height: 30px;
+	       position: absolute;
+	       display: inline-block;
+	   }
+
+h1:before {
+    border-left: solid 3px #a9a9a9;
+    border-top: solid 3px #a9a9a9;
+    top:0;
+    left: 0;
+}
+
+h1:after {
+    border-right: solid 3px #a9a9a9;
+    border-bottom: solid 3px #a9a9a9;
+    bottom:0;
+    right: 0;
+}
+
+h2 {
+    color: white;
+    background-color: #FFCC66;
+    padding-left: 10px;
+}
+
+div img {
+    display: block;
+    margin: 20px;
+    max-width: 90%;
+}
+
+div.wrap {
+    display:flex;
+}
+
+div .img {
+    width:49%;
+}
+
+
+
+div .analysis {
+    width: 49%;
+}
+
+div .analysis .analysis-text {
+    margin: 20px;
+}
+
+div .analysis h2 {
+    background-color: #ff7f50;
+}
+
+
+      #result {
+        width:300px;
+        height:300px;
+        position:absolute;
+        top:200px;
+        left:550px;
+      }
+
+    #result ul{
+list-style-type:none;
+text-align:center;
+
+    }
+
+    #result ul li{
+  width:350px;
+  padding:10px 0;
+  margin:10px 0;
+  vertical-align:middle;
+  font-weight:bold;
+font-size:20px;
+color:#a9a9a9;
+    }
+
+  #result ul li span{
+         font-size:30px;
+           color: #FFCC66;
+         }

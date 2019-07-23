@@ -1,11 +1,35 @@
-<%="送信画像" %><br/>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+
+  <head>
+      <meta charset="UTF-8">
+    <title>読めルンです。</title>
+<link rel="stylesheet" type="text/css" href="image.css">
+</head>
+
+  <body>
+    <h1><a href="top">読め<span>ルン</span>です。</a></h1>
+    <div class="wrap">
+      <div class="img">
+  <h2>なんでもカイセキ。</h2>
+
 <%= image_tag(@image) %><br/>
-<%="類似度ランキング"%>
-<table border="1">
+</div>
+        <div class="analysis">
+        <h2>結果</h2>
+<div class="analysis-text">
+<div id = "result">
+  <ul>
+    <li>この画像は...</li>
 <% @bbb.each do|a| %>
-<tr>
-  <td><%= a["class"] %></td>
-  <td><%= a["score"] %></td>
-</tr>
+<li><span><%= a["score"] %>%</span>の確率で<span><%= a["class"] %></span>です。</li>
 <% end %>
-</table>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
