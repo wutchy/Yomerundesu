@@ -1,1 +1,6 @@
-<%=@ccc%>
+<%= image_tag(@image) %><br/>
+上の人は…<br/>
+<%=(@ccc["age"]["score"]*100).round %>%の確率で
+<%=@ccc["age"]["min"]%>~<%=@ccc["age"]["max"]%>歳です！<br/>
+<%=(@ccc["gender"]["score"]*100).round %>%の確率で
+<%=@ccc["gender"]["gender"]=="MALE"?"男性":"女性"%>です！<br/>

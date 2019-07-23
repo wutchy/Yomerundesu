@@ -1,1 +1,11 @@
-<%=simple_format(@bbb) %>
+<%="送信画像" %><br/>
+<%= image_tag(@image) %><br/>
+<%="類似度ランキング"%>
+<table border="1">
+<% @bbb.each do|a| %>
+<tr>
+  <td><%= a["class"] %></td>
+  <td><%= a["score"] %></td>
+</tr>
+<% end %>
+</table>
