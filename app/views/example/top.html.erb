@@ -27,23 +27,25 @@
      <div class="child">
  <div class="divName"></div>
  <%= form_tag("ddd",method: "post")   do  %>
-   <button type="submit" name="name" value="1" class="submit_btn picture1">
+   <button type="submit" name="name" value="1" class="submit_btn picture1"></button>
  <% end %>
  <p class="div-contents">画像内の文字をテキスト変換しちゃ<span>ウン</span>です。</p>
      </div>
 
      <div class="child">
  <div class="divName"></div>
- <%= form_tag("upload",method: "post")   do  %>
-   <button type="submit" name="name" value="2" class="submit_btn picture2">
- <% end %>
+ <%# <%= form_tag("upload",method: "post")   do  %>
+ <form action="upload" method="post">
+   <button type="submit" name="name" value="2" class="submit_btn picture2"></button>
+  </form>
+ <%# <% end %>
  <p class="div-contents">画像内の人物にタグ付けしちゃ<span>ウン</span>です。</p>
      </div>
 
      <div class="child">
  <div class="divName"></div>
  <%= form_tag("upload",method: "post")   do  %>
-   <button type="submit" name="name" value="3" class="submit_btn picture3">
+   <button type="submit" name="name" value="3" class="submit_btn picture3"></button>
  <% end %>
  <p class="div-contents">画像内の食べ物にタグ付けしちゃ<span>ウン</span>です。</p>
      </div>
@@ -51,7 +53,7 @@
      <div class="child">
  <div class="divName"></div>
  <%= form_tag("upload",method: "post")   do  %>
-   <button type="submit" name="name" value="4" class="submit_btn picture4">
+   <button type="submit" name="name" value="4" class="submit_btn picture4"></button>
  <% end %>
  <p class="div-contents">全ての処理を実行しちゃ<span>ウン</span>です。</p>
      </div>

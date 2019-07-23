@@ -3,33 +3,33 @@
 <html lang="ja">
 
 
-  <head>
-      <meta charset="UTF-8">
-    <title>読めルンです。</title>
-<link rel="stylesheet" type="text/css" href="image.css">
+<head>
+  <meta charset="UTF-8">
+  <title>読めルンです。</title>
+  <link rel="stylesheet" type="text/css" href="image.css">
 </head>
 
-  <body>
-    <h1><a href="top">読め<span>ルン</span>です。</a></h1>
-    <div class="wrap">
-      <div class="img">
-  <h2>たべものカイセキ。</h2>
+<body>
+  <h1><a href="top">読め<span>ルン</span>です。</a></h1>
+  <div class="wrap">
+    <div class="img">
+      <h2>たべものカイセキ。</h2>
 
-<%= image_tag(@image) %><br/>
-</div>
-        <div class="analysis">
-        <h2>結果</h2>
-<div class="analysis-text">
-<div id = "result">
-  <ul>
-    <li>この画像は...</li>
-<% @aaa.each do|a| %>
-<li><span><%= a["score"] %>%</span>の確率で<span><%= a["class"] %></span>です。</li>
-<% end %>
-</ul>
-</div>
-</div>
-</div>
-</div>
+      <%= image_tag(@image) %><br/>
+    </div>
+    <div class="analysis">
+      <h2>結果</h2>
+      <div class="analysis-text">
+        <div id = "result">
+          <ul>
+            <li>この画像は...</li>
+            <% @aaa.each do|a| %>
+            <li><span><%= a["score"] %>%</span>の確率で<span><%= a["class"] %></span>です。</li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
