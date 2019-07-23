@@ -63,4 +63,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'ibm_watson'
 gem 'carrierwave'
-gem 'bundler' '>= 2.0.1'
+gem 'bundler'
