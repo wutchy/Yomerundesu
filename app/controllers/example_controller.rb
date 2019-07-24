@@ -20,7 +20,7 @@ class ExampleController < ApplicationController
   def aaa
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: ENV['APIKEY']
     )
     File.binwrite("public/test.jpg",params[:image].read)
     @image="/test.jpg"
@@ -38,7 +38,7 @@ class ExampleController < ApplicationController
   def bbb
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: ENV['APIKEY']
     )
     File.binwrite("public/test.jpg",params[:image].read)
     @image="/test.jpg"
@@ -56,7 +56,7 @@ class ExampleController < ApplicationController
   def ccc
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: ENV['APIKEY']
     )
     File.binwrite("public/test.jpg",params[:image].read)
     @image="/test.jpg"
