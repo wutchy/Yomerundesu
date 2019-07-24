@@ -78,12 +78,12 @@ div .analysis h2 {
 }
 
 center{
-
+  margin-bottom: 35px;
 }
 
 #result {
   width:300px;
-  height:300px;
+  height:100%;
   /* position:absolute; */
   top:200px;
   left:550px;

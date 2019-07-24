@@ -82,7 +82,8 @@
 
 
       <%= form_tag(path,method: "post", multipart: true)   do  %>
-        <%= file_field_tag :image  %><br/>
+        <%# <%= file_field_tag :image  %>
+        <input id="myfile" type="file" name="image" accept="image/*">
         <input type="submit" class="submit-btn" value="送信">
       <% end %>
 

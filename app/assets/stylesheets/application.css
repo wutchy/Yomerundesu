@@ -273,9 +273,3 @@ div .analysis h2 {
 .btn-horizontal-border:hover:after {
   top: 3px;
 }
-
-footer{
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-}
