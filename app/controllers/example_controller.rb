@@ -8,7 +8,7 @@ class ExampleController < ApplicationController
 
   def top
   end
-
+  
   def upload
   end
 

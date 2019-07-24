@@ -14,3 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function checkForm(){
+  filename=document.uploadform.image.value
+  if (!filename || !filename.match(/.(jpg|jpeg|png|gif)$/i)){
+    alert('画像を選択して下さい');
+    return false;
+  }else{
+    return true;
+  }
+}

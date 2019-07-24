@@ -1,7 +1,3 @@
-
-
-
-
 <% if params["name"]=="1" %>
 <% path="ddd" %>
 <% title="文字認証"%>
@@ -15,78 +11,26 @@
 <% path="bbb" %>
 <% title="ナンデモ認証"%>
 <% end %>
-
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>読めルンです。</title>
-    <meta name="description" content="画像からテキストを生成し、タグ付けによる分類ができるウェブアプリです。">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-      $(function(){
-	  $('#myfile').change(function(e){
-	      //ファイルオブジェクトを取得する
-	      var file = e.target.files[0];
-	      var reader = new FileReader();
-
-	      //画像でない場合は処理終了
-	      if(file.type.indexOf("image") < 0){
-		  alert("画像ファイルを指定してください。");
-		  return false;
-	      }
-	      var div = document.getElementsByClassName('drag-area');
-	      div.textContent = null;
-
-	      var img = document.createElement('img');
-	      img.className = 'preview';
-	      div.appendChild(img);
-
-	      //アップロードした画像を設定する
-	      reader.onload = (function(file){
-		  return function(e){
-		      $(".preview").attr("src", e.target.result);
-		      $(".preview").attr("title", file.name);
-		  };
-	      })(file);
-	      reader.readAsDataURL(file);
-
-	  });
-      });
-    </script>
-  </head>
-
-  <body>
-    <h1><a href="top">読め<span>ルン</span>です。</a></h1>
-    <h2>画像をアップロード</h2>
-
-    <div class="upload-wrap">
-      <div class="drag-area">
-	<p>ここにファイルやフォルダをドラッグすると簡単に画像をアップロードできます</p>
-      </div>
-
-
-      <!-- <form action="./analysis.cgi" method="post" enctype="multipart/form-data">
-	<input id="myfile" type="file" name="imgData" accept="image/*">
-	<br>
-	<input type="submit" class="submit-btn" value="送信">
-      </form> -->
-
-
-      <%= form_tag(path,method: "post", multipart: true)   do  %>
-        <%# <%= file_field_tag :image  %>
-        <input id="myfile" type="file" name="image" accept="image/*">
-        <input type="submit" class="submit-btn" value="送信">
-      <% end %>
-
+<head>
+  <meta charset="utf-8">
+  <title>読めルンです。</title>
+  <meta name="description" content="画像からテキストを生成し、タグ付けによる分類ができるWebアプリです。">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1><a href="top">読め<span>ルン</span>です。</a></h1>
+  <h2>画像をアップロード</h2>
+  <div class="upload-wrap">
+    <div class="drag-area">
+      <p>ここにファイルやフォルダをドラッグすると簡単に画像をアップロードできます</p>
     </div>
+    <%= form_tag(path, method: "post", multipart: true, name: "uploadform") do %>
+    <input id="myfile" type="file" name="image" accept="image/*">
+    <input type="submit" class="submit-btn" value="送信" onclick="return checkForm();">
+    <% end %>
+  </div>
 </body>
 </html>
