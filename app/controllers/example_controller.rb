@@ -1,3 +1,4 @@
+# coding: utf-8
 class ExampleController < ApplicationController
 
   require "json"
@@ -20,7 +21,7 @@ class ExampleController < ApplicationController
   def aaa
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
     )
     File.binwrite("public/images/test.jpg",params[:image].read)
     @image="/images/test.jpg"
@@ -38,7 +39,7 @@ class ExampleController < ApplicationController
   def bbb
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
     )
     File.binwrite("public/images/test.jpg",params[:image].read)
     @image="/images/test.jpg"
@@ -56,7 +57,7 @@ class ExampleController < ApplicationController
   def ccc
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "UijvdSiykSyVcX9zu4yyOch4dzLYgDvMj8bVJZfo8ERL"
+      iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
     )
     File.binwrite("public/images/test.jpg",params[:image].read)
     @image="/images/test.jpg"
