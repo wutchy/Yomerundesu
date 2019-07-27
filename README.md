@@ -1,4 +1,4 @@
-# YomeRunDesu
+# 読めルンです(Yomerundesu)
 ## 概要
 画像を送信すると、
 1. 文字起こし
@@ -8,8 +8,10 @@
 
 などの結果を表示する
 
+ただし、現在のところテキストの文字起こしはAPIの取得が出来ないため、利用は出来ない。
+
 ## 実装
 IBM CloudでVisual RecognitioのAPIをたて、Ruby on Railsで構築したアプリケーションでAPIを叩いた結果を整形して表示する
 
 ## リンク
-https://immense-crag-66405.herokuapp.com/example/top
+https://yomerundesu.herokuapp.com/example/top
