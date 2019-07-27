@@ -14,4 +14,4 @@
 IBM CloudでVisual RecognitioのAPIをたて、Ruby on Railsで構築したアプリケーションでAPIを叩いた結果を整形して表示する
 
 ## リンク
-https://yomerundesu.herokuapp.com/example/top
+https://yomerundesu.herokuapp.com
