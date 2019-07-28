@@ -10,15 +10,21 @@ class ExampleController < ApplicationController
   def top
   end
 
-  def upload
+  def food_upload
+  end
+
+  def face_upload
+  end
+
+  def general_upload
   end
 
   #文字認証
-  def ddd
+  def text
   end
 
   #食べ物認証
-  def aaa
+  def food
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
@@ -31,12 +37,12 @@ class ExampleController < ApplicationController
         classifier_ids:["food"],
         accept_language: ["ja"]
       )
-      @aaa= JSON.parse(JSON.pretty_generate(classes.result))["images"][0]["classifiers"][0]["classes"]
+      @food= JSON.parse(JSON.pretty_generate(classes.result))["images"][0]["classifiers"][0]["classes"]
     end
   end
 
   #なんでも認証
-  def bbb
+  def general
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
@@ -49,12 +55,12 @@ class ExampleController < ApplicationController
         #classifier_ids:["text"],
         accept_language: ["ja"]
       )
-      @bbb= JSON.parse(JSON.pretty_generate(classes.result))["images"][0]["classifiers"][0]["classes"]
+      @general= JSON.parse(JSON.pretty_generate(classes.result))["images"][0]["classifiers"][0]["classes"]
     end
   end
 
   #食べ物認証
-  def ccc
+  def face
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
@@ -65,7 +71,7 @@ class ExampleController < ApplicationController
       faces = visual_recognition.detect_faces(
         images_file: images_file
       )
-      @ccc=JSON.parse(JSON.pretty_generate(faces.result))["images"][0]["faces"][0]
+      @face=JSON.parse(JSON.pretty_generate(faces.result))["images"][0]["faces"][0]
     end
   end
 

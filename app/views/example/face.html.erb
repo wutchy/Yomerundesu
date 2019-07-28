@@ -18,11 +18,11 @@
         <div id = "result">
           <ul>
             <li>あなたは...</li>
-            <%if @ccc==nil %>
+            <%if @face==nil %>
               <li>残念ながら<span>人間</span>ではありません…</li>
             <% else %>
-              <li><span><%=(@ccc["age"]["score"]*100).round %>％</span>の確率で<span><%=@ccc["age"]["min"]%>~<%=@ccc["age"]["max"]%></span>歳で、</li>
-              <li><span><%=(@ccc["gender"]["score"]*100).round %>％</span>の確率で<span><%=@ccc["gender"]["gender"]=="MALE"?"男性":"女性"%></span>です!</li>
+              <li><span><%=(@face["age"]["score"]*100).round %>％</span>の確率で<span><%=@face["age"]["min"]%>~<%=@face["age"]["max"]%></span>歳で、</li>
+              <li><span><%=(@face["gender"]["score"]*100).round %>％</span>の確率で<span><%=@face["gender"]["gender"]=="MALE"?"男性":"女性"%></span>です!</li>
             <% end %>
           </ul>
         </div>
