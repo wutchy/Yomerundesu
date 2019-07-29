@@ -1,15 +1,22 @@
 div img {
   display: block;
   margin: 20px;
-  max-width: 90%;
+  width: 80%;
+  height: auto;
 }
 
-div.wrap {
+.wrap {
   display:flex;
 }
 
-div .img {
-  width:49%;
+.img {
+    width:49%;
+}
+
+.img-print {
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 div .analysis {
@@ -17,9 +24,43 @@ div .analysis {
 }
 
 div .analysis .analysis-text {
-  margin: 20px;
+    margin: 20px;
+    text-align: center;
 }
 
 div .analysis h2 {
   background-color: #ff7f50;
+}
+
+#result {
+    width:100%;
+    height:100%;
+    /* position:absolute; */
+    top:200px;
+    left:550px;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
+
+#result ul{
+    list-style-type:none;
+    text-align:center;
+
+}
+
+#result ul li{
+    text-align:center;
+    width:350px;
+    padding:10px 0;
+    margin:10px 0;
+    vertical-align:middle;
+    font-weight:bold;
+    font-size:20px;
+    color:#a9a9a9;
+}
+
+#result ul li span{
+    font-size:30px;
+    color: #FFCC66;
 }

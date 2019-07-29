@@ -28,7 +28,7 @@ class ExampleController < ApplicationController
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
-    )
+    ) 
     File.binwrite("public/images/test.jpg",params[:image].read)
     @image="/images/test.jpg"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
@@ -40,7 +40,7 @@ class ExampleController < ApplicationController
       @food= JSON.parse(JSON.pretty_generate(classes.result))["images"][0]["classifiers"][0]["classes"]
     end
   end
-
+    
   #なんでも認証
   def general
     visual_recognition = VisualRecognitionV3.new(
