@@ -29,8 +29,8 @@ class ExampleController < ApplicationController
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
     ) 
-    File.binwrite("public/images/test.jpg",params[:image].read)
-    @image="/images/test.jpg"
+    File.binwrite("public/images/food_result.jpg",params[:image].read)
+    @image="/images/food_result.jpg"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
       classes = visual_recognition.classify(
         images_file: images_file,
@@ -47,8 +47,8 @@ class ExampleController < ApplicationController
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
     )
-    File.binwrite("public/images/test.jpg",params[:image].read)
-    @image="/images/test.jpg"
+    File.binwrite("public/images/general_result.jpg",params[:image].read)
+    @image="/images/general_result.jpg"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
       classes = visual_recognition.classify(
         images_file: images_file,
@@ -59,14 +59,14 @@ class ExampleController < ApplicationController
     end
   end
 
-  #食べ物認証
+  #顔認証
   def face
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
       iam_apikey: "dJocI43alxAPvPH_uK-GyLx53yi6pfJ4YI_AVDlTgo_c"
     )
-    File.binwrite("public/images/test.jpg",params[:image].read)
-    @image="/images/test.jpg"
+    File.binwrite("public/images/face_result.jpg",params[:image].read)
+    @image="/images/face_result.jpg"
     File.open("#{Rails.root}/public#{@image}") do |images_file|
       faces = visual_recognition.detect_faces(
         images_file: images_file
