@@ -1,17 +1,16 @@
 .second{
     text-align:		center;
-    margin-top:		30px;
-    margin-bottom:	30px;
+    margin-top:		10px;
 }
 .subtitle{
     letter-spacing:	10px;
     text-align:		center;
     font-size:		40px;
-    font-weight:		bold;
+    font-weight:	bold;
     margin:		10px;
     color:		#a9a9a9;
     position:		relative;
-    line-height:		1.4;
+    line-height:	1.4;
     padding:		0.25em 1em;
     display:		inline-block;
 }
@@ -38,122 +37,61 @@
     right:		0;
 }
 .parent{
+    height: 90%;
     width:		60%;
     margin:		0 auto;
     text-align:		center;
 }
 .child{
-    float:		left;
-    text-align:		center;
-    width:		50%;
-    font-size:		15px;
-    font-weight:		bold;
-    color:		#a9a9a9;
-    line-height:		1.4;
-    padding:		0.25em 1em 50px 0px;
-    display:		inline-block;
+    height: 50%;
+    width: 60%;
+    text-align:	center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #a9a9a9;
+    line-height: 1.4;
+    display: inline-block;
 }
+
+.row1 {
+    display: flex;
+    height: 50%;
+}
+
+
+.row2 {
+    display: flex;
+    height: 50%;
+}
+
+.child a {
+    display: flex;
+    justify-content: center;
+}
+
 .child span{
     color:		#66cdaa;
 }
-@media screen and (max-width: 800px){
-    .second{
-        text-align:	center;
-        margin-top:	30px;
-        margin-bottom:	30px;
-    }
-    .subtitle{
-        letter-spacing:	10px;
-        text-align:	center;
-        font-size:	25px;
-        font-weight:	bold;
-        margin:		10px;
-        color:		#a9a9a9;
-        position:		relative;
-        line-height:	1.4;
-        padding:		0.25em 1em;
-        display:		inline-block;
-    }
-    .subtitle span {
-        color:		#66cdaa;
-    }
-    .parent{
-        width:		60%;
-        margin:		0 auto;
-        text-align:	center;
-    }
-    .child{
-        float:		left;
-        text-align:	center;
-        width:		100%;
-        font-size:	20px;
-        font-weight:	bold;
-        color:		#a9a9a9;
-        line-height:	1.4;
-        padding:		0.25em 1em 50px 0px;
-        display:		inline-block;
-    }
-    .child span{
-        color:		#66cdaa;
-    }
-}
-.picture1{
+
+
+img {
+    text-align: center;
     border:		0px;
-    width:		200px;
-    height:		200px;
-    background:	url(/images/text.jpg) left top no-repeat;
-    background-size:	contain;
+    width:		50%;
+    height:		50%;
     transition:		.3s;
     clear:		both;
-border-radius: 20px;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
-}
-.picture2{
-    border:		0px;
-    width:		200px;
-    height:		200px;
-    background:		url(/images/face.jpg) left top no-repeat;
-    background-size:	contain;
-    transition:		.3s;
-    clear:		both;
-border-radius: 20px;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
-}
-.picture3{
-    border:		0px;
-    width:		200px;
-    height:		200px;
-    background:		url(/images/food.jpg) left top no-repeat;
-    background-size:	contain;
-    transition:		.3s;
-border-radius: 20px;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
-}
-.picture4{
-    border:		0px;
-    width:		200px;
-    height:		200px;
-    background:		url(/images/earth.jpg) left top no-repeat;
-    background-size:	contain;
-    transition:		.3s;
-border-radius: 20px;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
 }
 
-.submit_btn:hover{
+img:hover{
     cursor:		pointer;
     animation:		big 0.1s;
     animation-fill-mode:	forwards;
 }
-@keyframes big
-{
-    0% {transform: scale(1); }
-    100% {transform: scale(1.2);}
-}
+
 .submit_btn:active{
     -webkit-filter: opacity(0.4);
     -moz-filter: opacity(0.4);
@@ -162,5 +100,7 @@ border-radius: 20px;
     filter:		opacity(0.4);
 }
 .div-contents {
-margin-top:15px;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
 }

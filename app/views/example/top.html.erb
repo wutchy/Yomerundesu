@@ -4,9 +4,8 @@
   <meta charset="utf-8">
   <title>読めルンです。</title>
   <meta name="description" content="画像からテキストを生成し、タグ付けによる分類ができるウェブアプリです。">
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
-  <%= favicon_link_tag('example/favicon.ico') %>
+  <%= stylesheet_link_tag "example/style" %>
+  <%= stylesheet_link_tag "example/top" %>
 </head>
 <body>
   <h1><a href="/">読め<span>ルン</span>です。</a></h1>
@@ -15,34 +14,25 @@
     <div class="subtitle">したいコトを選<span>ブン</span>です。</div>
   </div>
   <div class="parent">
-    <div class="child">
-      <div class="divName"></div>
-      <%= form_tag("example/text",method: "post")   do  %>
-      <button type="submit" name="name" value="text" class="submit_btn picture1"></button>
-      <% end %>
-      <p class="div-contents">手書き文字をテキストに変換しちゃ<span>ウン</span>です。</p>
+    <div class="row1">
+      <div class="child">
+	<%= link_to image_tag('/images/text.jpg'), '/example/text', { :class => "submit_btn picture1"} %>
+	<p class="div-contents"><span>文字</span>を認識しちゃ<span>ウン</span>です。</p>
+      </div>
+      <div class="child">
+	<%= link_to image_tag('/images/face.jpg'), '/example/face_upload', { :class => "submit_btn picture2"} %>
+	<p class="div-contents"><span>顔写真</span>を認識しちゃ<span>ウン</span>です。</p>
+      </div>
     </div>
-    <div class="child">
-      <div class="divName"></div>
-      <%= form_tag("example/face_upload",method: "post")   do  %>
-      <button type="submit" name="name" value="face" class="submit_btn picture2"></button>
-      </form>
-      <% end %>
-      <p class="div-contents">顔写真から年齢と性別を認識しちゃ<span>ウン</span>です。</p>
-    </div>
-    <div class="child">
-      <div class="divName"></div>
-      <%= form_tag("example/food_upload",method: "post")   do  %>
-      <button type="submit" name="name" value="food" class="submit_btn picture3"></button>
-      <% end %>
-      <p class="div-contents">食べ物を認識しちゃ<span>ウン</span>です。</p>
-    </div>
-    <div class="child">
-      <div class="divName"></div>
-      <%= form_tag("example/general_upload",method: "post")   do  %>
-      <button type="submit" name="name" value="general" class="submit_btn picture4"></button>
-      <% end %>
-      <p class="div-contents">ドンナ画像でも認識しちゃ<span>ウン</span>です。</p>
+    <div class="row2">
+      <div class="child">
+	<%= link_to image_tag('/images/food.jpg'), '/example/food_upload', { :class => "submit_btn picture3"} %>
+	<p class="div-contents"><span>食べ物</span>を認識しちゃ<span>ウン</span>です。</p>
+      </div>
+      <div class="child">
+	<%= link_to image_tag('/images/earth.jpg'), '/example/general_upload', { :class => "submit_btn picture4"} %>
+	<p class="div-contents"><span>ナンデモ</span>認識しちゃ<span>ウン</span>です。</p>
+      </div>
     </div>
   </div>
 </body>
