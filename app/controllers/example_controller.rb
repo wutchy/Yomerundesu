@@ -19,6 +19,9 @@ class ExampleController < ApplicationController
   def general_upload
   end
 
+  def reload
+  end
+
   #文字認証
   def text
   end
